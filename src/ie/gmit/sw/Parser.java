@@ -29,7 +29,11 @@ public class Parser implements Runnable {
 
 	@Override
 	public void run() {
-
+		/**
+		 * takes in the lines from the language text files and removes the @ symbol
+		 * 
+		 * 
+		 * */
 		try {
 			BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(file)));
 			String line = null;
@@ -56,6 +60,16 @@ public class Parser implements Runnable {
 		}
 
 	}
+	/**
+	 * @author Dylan Creaven
+	 * @version 1.0
+	 * @since 1.8
+	 * Parses the query file into a map which is sorted
+	 * creates map containing frequencies,ngrams, and ranks
+	 * @param File query file
+	 * @param kmer which ngram to use(1,2,3 etc)
+	 * @return the queryMap of ngrams
+	 * */
 
 	public Map<Integer, LanguageEntry> queryParse(int k, String file) {
 		Map<Integer, Integer> map = new HashMap<Integer, Integer>();

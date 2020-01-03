@@ -3,7 +3,11 @@ package ie.gmit.sw;
 import java.util.*;
 
 public class Menu {
-
+/**
+ * Displays the Menu to the user
+ * 
+ * 
+ * */
 	void displayMenu() {
 
 		System.out.println("***************************************************");
@@ -24,6 +28,10 @@ public class Menu {
 
 	}
 
+	/**
+	 * Outputs what the program think the query file is written in
+	 * 
+	 * */
 	public void resultOutput(Database db, Map<Integer, LanguageEntry> q) {
 		System.out.println("Processing Query......PLEASE WAIT");
 		System.out.println("Text appears to be written in :     " + db.getLanguage(q));
